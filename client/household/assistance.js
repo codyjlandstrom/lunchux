@@ -12,7 +12,7 @@ Template.assistance.events({
 			var currentUser = Session.get('currentUser');
 			currentUser.profile.assistanceType = assistanceType;
 			Meteor.call('updateUser', currentUser);
-			// Router.go('/householdMembers');
+			Router.go('/householdMembers');
 		} else {
 			console.log('nope')
 		}
