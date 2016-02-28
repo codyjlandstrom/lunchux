@@ -1,21 +1,23 @@
 <template name="addAdult">
 
-  <div class="container">
+	<div class="banner">
+		<h2 class="center">Household Member 2</h2>
+	</div>
 
-    <h3 class="section-title">Thanks Lauren! <br><br>Who are your household members?</h3>
-    <p>A household member is anyone who both lives with you and share your income expenses.</p>
+	<div class="container">
 
-    <div class="form-group">
-      <form>
-        <input type="text" class="form-control form-adult" value="Lauren MacGuidwin" disabled="true">
-      </form>
-    </div>
-    
+	  <div class="member-icon">
+	  	<!-- <img src="{{ "/imgs/adult@2x.png" | prepend: site.baseurl }}" width="34" height="33" alt="Adult"> -->
+	  	<p>Adult</p>
+	  </div>
 
-    <a class="default-button" href="household4.html">+ Add Adult</a>
-    <a class="default-button">+ Add Child</a>
-    <a href="#" class="tip">Who qualifies as a child?</a>
+	  <form class="form-group">
+	  	<input type="text" value="" class="form-control" placeholder="First Name">
+	  	<input type="text" value="" class="form-control" placeholder="Last Name">
+	  </form>
 
-  </div>
+	  <a class="default-button" href="household5.html">Save Adult</a>
+
+	</div>
 
 </template>

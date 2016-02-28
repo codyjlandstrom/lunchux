@@ -5,17 +5,17 @@ Template.assistance.onRendered(function() {
 Template.assistance.events({
 	'click .bottom-button': function(event){
 		event.preventDefault();
-		var assistanceType = $('input[name=assistance-program]:checked', '#assistanceForm').val()
+		var assistanceType = $('input[name=assistance-program]:checked', '#assistanceForm').val();
 		// var lastName = $('#signatureLastName').val();
 		// var date = $('#signatureDate').val();
-		// if (firstName !== '' && lastName !== '' && date !== '') {
+		if (assistanceType !== 'true') {
 			var currentUser = Session.get('currentUser');
-			currentUser.assistanceType = assistanceType;
+			currentUser.profile.assistanceType = assistanceType;
 			Meteor.call('updateUser', currentUser);
-			// Router.go('/intro1');
-		// } else {
-		// 	console.log('nope')
-		// }
+			// Router.go('/householdMembers');
+		} else {
+			console.log('nope')
+		}
 	}
 })
 

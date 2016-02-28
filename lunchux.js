@@ -82,11 +82,12 @@
 // if (Meteor.isClient) {
   Meteor.methods({
   	'updateUser': function(user) {
+  		var profile = user.profile;
 		Meteor.users.update(Meteor.userId(), {$set: {
-			"profile.firstName": user.firstName,
-			"profile.lastName": user.lastName,
-			"profile.date" : user.date,
-			"profile.assistanceType" : user.assistanceType
+			"profile.firstName": profile.firstName,
+			"profile.lastName": profile.lastName,
+			"profile.date" : profile.date,
+			"profile.assistanceType" : profile.assistanceType
 		}});
 		console.log("user updated");
   	}
@@ -149,6 +150,7 @@ if (Meteor.isServer) {
 Router.route("/signature");
 Router.route('/intro1');
 Router.route('/intro2');
+Router.route('/assistance');
 Router.route('/addChild');
 Router.route('/addAdult');
-Router.route('/assistance');
+Router.route('/householdMembers')
