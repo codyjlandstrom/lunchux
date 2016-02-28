@@ -1,0 +1,752 @@
+/**
+ * Site header
+ */
+.site-header {
+    border-top: 5px solid $grey-color-dark;
+    border-bottom: 1px solid $grey-color-light;
+    min-height: 56px;
+
+    // Positioning context for the mobile navigation icon
+    position: relative;
+}
+
+.site-title {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 56px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    float: left;
+
+    &,
+    &:visited {
+        color: $grey-color-dark;
+    }
+}
+
+.navbar {
+    &.navbar-inverse {
+        background-color: $lunchline-red;
+        border-color: $lunchline-red;
+        box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+
+        .navbar-nav>.active>a {
+            background-color: $lunchline-red;
+        }
+    }
+}
+
+.navbar-header {
+    text-align: center;
+    float: none;
+    margin-top: 10px;
+}
+.navbar-brand {
+    float: none;
+
+    img {
+        display: inline;
+    }
+}
+
+.logout {
+    float: right;
+    a {
+        font-size: 10px;
+        line-height: 12px;
+        border: 1px solid #F9F7F5;
+        border-radius: 8px;
+        color: $white;
+        text-decoration: none;
+        padding: 3px;
+    }
+    
+}
+
+.site-nav {
+    float: right;
+    line-height: 56px;
+
+    .menu-icon {
+        display: none;
+    }
+
+    .page-link {
+        color: $text-color;
+        line-height: $base-line-height;
+
+        // Gaps between nav items, but not on the last one
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    @include media-query($on-palm) {
+        position: absolute;
+        top: 9px;
+        right: $spacing-unit / 2;
+        background-color: $background-color;
+        border: 1px solid $grey-color-light;
+        border-radius: 5px;
+        text-align: right;
+
+        .menu-icon {
+            display: block;
+            float: right;
+            width: 36px;
+            height: 26px;
+            line-height: 0;
+            padding-top: 10px;
+            text-align: center;
+
+            > svg {
+                width: 18px;
+                height: 15px;
+
+                path {
+                    fill: $grey-color-dark;
+                }
+            }
+        }
+
+        .trigger {
+            clear: both;
+            display: none;
+        }
+
+        &:hover .trigger {
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        .page-link {
+            display: block;
+            padding: 5px 10px;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+            margin-left: 20px;
+        }
+    }
+}
+
+/**
+ * Banner Styles
+ */
+
+ .banner {
+    background-color: $dark-gray;
+    width: 100%;
+    height: auto;
+
+    h2 {
+        font-size: 18px;
+        color: $white;
+        line-height: 65px;
+    }
+ }
+
+
+
+/**
+ * Form Styles
+ */
+
+.terms {
+    width: 100%;
+    height: 200px;
+    margin: 30px 0;
+    padding: 0 10px;
+    border-radius: 8px;
+}
+
+.form-control {
+    font-size: 18px;
+    border-radius: 8px;
+    border: solid 2px #979797;
+    height: 68px;
+    margin-bottom: 10px;
+}
+
+.radio {
+    font-size: 18px;
+}
+
+.radio-tip {
+    display: block;
+    font-size: 16px;
+}
+
+
+.form-control[disabled] {
+    background-color: $white;
+    border-color: $gray;
+    font-size: 18px;
+    color: $dark-gray;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-adult, .form-child {
+    background-repeat: no-repeat;
+    background-position-x: 15px;
+    background-position-y: 13px;
+    padding-left: 65px;
+}
+
+.form-adult {
+    background-image: url('/imgs/adult@2x.png');
+    background-size: 34px;
+}
+.form-child {
+    background-image: url('/imgs/child@2x.png');
+    background-size: 35px;
+}
+
+
+/**
+ * Bottom Buttons
+ */
+
+
+.default-button,.bottom-button {
+    width: 100%;
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    line-height: 65px;
+
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.bottom-button {
+    background-color: $lunchline-red;
+    color: $white;
+    margin-top: 33px;
+
+    &:visited {
+        color: $white;
+    }
+    &:active {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+.default-button {
+    color: $lunchline-red;
+    border: 2px solid $lunchline-red;
+    border-radius: 8px;
+    margin-bottom: 10px;
+
+    &:visited {
+        color: $lunchline-red;
+    }
+    &:active {
+        background-color: $lunchline-red;
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+.bottom-button-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.disabled {
+    background-color: $lunchline-light-red;
+}
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+    border-top: 1px solid $grey-color-light;
+    padding: $spacing-unit 0;
+}
+
+.footer-heading {
+    font-size: 18px;
+    margin-bottom: $spacing-unit / 2;
+}
+
+.contact-list,
+.social-media-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.footer-col-wrapper {
+    font-size: 15px;
+    color: $grey-color;
+    margin-left: -$spacing-unit / 2;
+    @extend %clearfix;
+}
+
+.footer-col {
+    float: left;
+    margin-bottom: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+}
+
+.footer-col-1 {
+    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+    width:         calc(35% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    width:         calc(20% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+    width:         calc(45% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-laptop) {
+    .footer-col-1,
+    .footer-col-2 {
+        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+        width:         calc(50% - (#{$spacing-unit} / 2));
+    }
+
+    .footer-col-3 {
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+@include media-query($on-palm) {
+    .footer-col {
+        float: none;
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+
+
+/**
+ * Page content
+ */
+.page-content {
+    padding: 125px 0;
+}
+
+.page-heading {
+    text-align: center;
+    font-size: 25px;
+    color: $lunchline-red;
+    font-weight: bold;
+}
+
+.section-title {
+    font-size: 18px;
+    color: $dark-gray;
+    line-height: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.container p {
+    line-height: 19px;
+    color: $body-copy-gray;
+}
+
+.member-icon {
+    text-align: center;
+    margin: 20px 0;
+
+    img {
+        display: block;
+        margin: 3px auto;
+    }
+}
+
+.income-graphic {
+    display: block;
+    margin: 0 auto;
+    max-width: 250px;
+
+    p {
+        font-size: 18px;
+        margin:  5px 10px 20px 10px;
+    }
+}
+
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.post-link {
+    display: block;
+    font-size: 24px;
+}
+
+img {
+    margin: 10px 0;
+}
+
+
+/**
+ * To Be Sorted
+ */
+
+.inverse {
+    color: $white;
+    background-color: $lunchline-red;
+
+    .section-title {
+        color: $white;
+    }
+
+    .page-content {
+        padding: 0;
+    }
+
+    p {
+        color: $white;
+    }
+
+    .bottom-button, .default-button {
+        border-color: $white;
+        background-color: $lunchline-red;
+        color: $white;
+
+        &:visited {
+            color: $white;
+        }
+        &:active {
+            background-color: $white;
+            color: $lunchline-red;
+            text-decoration: none;
+        }
+    }
+}
+
+
+/**
+ * Accordion styling
+ */
+
+$color-1: #4d5158; // Abbey
+$color-2: #a0f6aa; // Gossip
+$color-3: #ffffff; // White
+
+// this variable modifies the size of all items
+
+$item-padding-S: 18px;
+$item-padding-M: 24px;
+
+$S:     480px;   
+$M:     600px;     
+$L:     1170px;     
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+}
+
+.accordion {
+    width: 100%;
+    margin: 10px 0;
+    list-style: none;
+
+    ul {
+        /* by default hide all sub menus */
+        display: none;
+        list-style: none;
+    }
+
+    li {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    input[type=checkbox] {
+        /* hide native checkbox */
+        position: absolute;
+        opacity: 0;
+    }
+
+    label, a {
+        position: relative;
+        display: block;
+        padding: 10px 0;
+        color: $lunchline-red;
+        font-weight: bold;
+
+        .no-touch &:hover {
+            
+        }
+    }
+
+    label::after, a::after {
+        /* icons */
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    label {
+        cursor: pointer;
+
+        &::before, &::after {
+            
+        }
+
+        &::before {
+            
+        }
+
+        &::after {
+            background-image: url(../imgs/accordion-icons.svg);
+            background-repeat: no-repeat;
+            /* arrow icon */
+            right: 0;
+            background-position: 0 0;
+            -webkit-transform: translateY(-50%) rotate(-90deg);
+            -moz-transform: translateY(-50%) rotate(-90deg);
+            -ms-transform: translateY(-50%) rotate(-90deg);
+            -o-transform: translateY(-50%) rotate(-90deg);
+            transform: translateY(-50%) rotate(-90deg);
+        }
+    }
+
+    a::after {
+        /* image icon */
+        right: 0;
+        background: url(../imgs/add@2x.png) no-repeat;
+        background-size: 60px;
+        width: 65px;
+        height: 31px;
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+
+    input[type=checkbox]:checked + label::after {
+        /* rotate arrow */
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    input[type=checkbox]:checked + label::after {
+        /* show open folder icon if item is checked */
+        // background-position: -32px 0;
+    }
+
+    input[type=checkbox]:checked + label + ul,
+    input[type=checkbox]:checked + label:nth-of-type(n) + ul {
+        /* use label:nth-of-type(n) to fix a bug on safari (<= 8.0.8) with multiple adjacent-sibling selectors*/
+        /* show children when item is checked */
+        display: block;
+    }
+
+    ul label,
+    ul a {
+        // background: darken($color-1, 10%);
+        color: $dark-gray;
+        font-weight: normal;
+        padding: 15px 0;
+
+        .no-touch &:hover {
+            // background: darken($color-1, 7%);
+        }
+    }
+
+    > li:last-of-type > label,
+    > li:last-of-type > a,
+    > li > ul > li:last-of-type label,
+    > li > ul > li:last-of-type a {
+        box-shadow: none;
+    }
+
+
+    ul label::after,
+    ul a::after {
+        right: 0;
+    }
+
+    ul ul label,
+    ul ul a {
+        padding-left: ($item-padding-S * 5) + 10px;
+    }
+
+    ul ul label::before {
+        left: $item-padding-S * 3;
+    }
+
+    ul ul label::after,
+    ul ul a::after {
+        left: ($item-padding-S * 4) + 5px;
+    }
+
+    ul ul ul label,
+    ul ul ul a {
+        padding-left: ($item-padding-S * 6) + 10px;
+    }
+
+    ul ul ul label::before {
+        left: $item-padding-S * 4;
+    }
+
+    ul ul ul label::after,
+    ul ul ul a::after {
+        left: ($item-padding-S * 5) + 5px;
+    }
+
+    @include MQ(M) {
+        label, a {
+            padding: $item-padding-M $item-padding-M $item-padding-M ($item-padding-M * 3) + 10px;
+            font-size: 1.9rem;
+        }
+
+        label::before {
+            left: $item-padding-M;
+        }
+
+        label::after {
+            left: ($item-padding-M * 2) + 5px;
+        }
+
+        ul label,
+        ul a {
+            padding-left: ($item-padding-M * 4) + 10px;
+        }
+
+        ul label::before {
+            left: $item-padding-M * 2;
+        }
+
+        ul label::after,
+        ul a::after {
+            left: ($item-padding-M * 3) + 5px;
+        } 
+
+        ul ul label,
+        ul ul a {
+            padding-left: ($item-padding-M * 5) + 10px;
+        }
+
+        ul ul label::before {
+            left: $item-padding-M * 3;
+        }
+
+        ul ul label::after,
+        ul ul a::after {
+            left: ($item-padding-M * 4) + 5px;
+        }
+
+        ul ul ul label,
+        ul ul ul a {
+            padding-left: ($item-padding-M * 6) + 10px;
+        }
+
+        ul ul ul label::before {
+            left: $item-padding-M * 4;
+        }
+
+        ul ul ul label::after,
+        ul ul ul a::after {
+            left: ($item-padding-M * 5) + 5px;
+        }
+    }
+
+    &.animated label::after {
+        /* this class is used if you're using jquery to animate the accordion */
+        -webkit-transition: -webkit-transform 0.3s;
+        -moz-transition: -moz-transform 0.3s;
+        transition: transform 0.3s;
+    }
+}
+
+
+
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 32px;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}

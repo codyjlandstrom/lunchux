@@ -1,23 +1,154 @@
-if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
+// Users = new Mongo.Collection('users');
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
-    }
-  });
+// Schema = {};
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
+// Schema.UserPersonRace = new SimpleSchema({
+// 	race: {
+// 		type: [String],
+// 		optional: true
+// 	}
+// })
+
+// Schema.UserPerson = new SimpleSchema({
+// 	firstName: {
+// 		type: String
+// 	},
+// 	middleInitial: {
+// 		type: String,
+// 		optional: true,
+// 		regEx: /^[A-Z]{1}$/
+// 	},
+// 	lastName: {
+// 		type: String
+// 	},
+// 	type: {
+// 		type: String,
+// 		allowedValues: ['Adult', 'Child'],
+// 	},
+// 	isStudent: {
+// 		type: Boolean
+// 	},
+// 	isFoster: {
+// 		type: Boolean,
+// 		optional: true
+// 	},
+// 	isMigrant: {
+// 		type: Boolean,
+// 		optional: true
+// 	},
+// 	isRunaway: {
+// 		type: Boolean,
+// 		optional: true
+// 	},
+// 	isHomeless: {
+// 		type: Boolean,
+// 		optional: true
+// 	},
+// 	isHeadstart: {
+// 		type: Boolean,
+// 		optional: true
+// 	},
+// 	SSN: {
+// 		type: String,
+// 		optional: true
+// 	},
+// 	streetAddress1: {
+// 		type: String,
+// 		optional: true
+// 	},
+// 	streetAddress2: {
+// 		type: String,
+// 		optional: true
+// 	},
+// 	zipcode: {
+// 		type: Number,
+// 		optional: true,
+// 	},
+// 	ethnicity: {
+// 		type: String,
+// 		allowedValues: ['Hispanic or Latino', 'Not Hispanic or Latino'],
+// 		optional: true;
+// 	}
+
+// });
+
+// Schema.User = new SimpleSchema({
+// 	person: {
+// 		type: [Schema.UserPerson]
+// 	}
+// })
+
+// Meteor.users.attachSchema(Schema.User);
+// if (Meteor.isClient) {
+  Meteor.methods({
+  	'updateUser': function(user) {
+		Meteor.users.update(Meteor.userId(), {$set: {
+			"profile.firstName": user.firstName,
+			"profile.lastName": user.lastName,
+			"profile.date" : user.date,
+			"profile.assistanceType" : user.assistanceType
+		}});
+		console.log("user updated");
+  	}
   });
-}
+// }
+
+// Users = new Mongo.Collection('users');
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
   });
+  // Meteor.methods({
+  // 	'updateUser': function(user) {
+  // 		console.log()
+  // 		console.log("update user called on server with user: ")
+  // 		console.log(user.firstName)
+  // 		console.log(user._id)
+
+  // 		// Meteor.users.update(this.userId, {$set: {
+	 //  	// 	"firstName": user.firstName,
+	 //  	// 	"lastName": user.lastName,
+	 //  	// 	"date": user.date
+  // 		// }});
+  // 		var usr = Meteor.users.findOne({"_id": this.userId});
+  // 		console.log(usr);
+  // 	}
+
+  // })
+
+//   Meteor.publish("userData", function () {
+//   if (this.userId) {
+//     return Meteor.users.find({_id: this.userId},
+//                              {fields: {'other': 1, 'things': 1}});
+//   } else {
+//     this.ready();
+//   }
+// });
+
+
 }
+
+// Router.route('/signature', function() {
+// 	console.log("/signature page loaded");
+// 	this.render("/signature");
+// 	.post(function () {
+//     this.response.end('post request\n');
+//   });
+// });
+
+// Router.route('/signature', {where: 'server'})
+//   .get(function () {
+//    this.render("/signature");
+//   })
+//   .post(function () {
+//   	console.log("post request recieved")
+//     this.response.end('post request\n');
+//   });
+
+Router.route("/signature");
+Router.route('/intro1');
+Router.route('/intro2');
+Router.route('/addChild');
+Router.route('/addAdult');
+Router.route('/assistance');
