@@ -6,62 +6,6 @@
 </head>
 
 <body>
-{{> loginButtons}}
-{{> header}}
+<!-- {{> loginButtons}} -->
 
 </body>
-
-<template name="home">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
-
-
-
-<template name="header">
-	<header>
-
-	  <div class="wrapper">
-
-	<!--     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-	 -->
-	    <nav class="navbar navbar-inverse navbar-fixed-top">
-	      <div class="container">
-	        <div class="navbar-header">
-	          <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-	            <span class="sr-only">Toggle navigation</span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	          </button> -->
-	          <a class="navbar-brand" href="#">
-	            <img src="/imgs/lunch_line@2x.png" alt="Lunch Line" width="75" height="22">
-	          </a>
-	        </div>
-	      </div>
-
-	      <!-- <div class="trigger">
-	        {% for my_page in site.pages %}
-	          {% if my_page.title %}
-	          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-	          {% endif %}
-	        {% endfor %}
-	      </div> -->
-
-	      <div class="breadcrumbs">
-	        <ol class="cd-multi-steps text-bottom count">
-	          <li class="visited"><a href="#0"> </a></li>
-	          <li class="visited" ><a href="#0"> </a></li>
-	          <li class="current"><em> </em></li>
-	          <li><em> </em></li>
-	          <li><em> </em></li>
-	        </ol>
-	      </div>
-
-	    </nav>
-
-	  </div>
-
-	</header>
-
-</template>

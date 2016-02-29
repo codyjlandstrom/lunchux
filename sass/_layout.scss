@@ -131,6 +131,86 @@
     }
 }
 
+.fixed-margin {
+    margin-top: 130px;
+}
+
+/**
+ * Homepage Marketing Styles
+ */
+
+ .marketing-intro {
+    width: 100%;
+    background-image: url('/imgs/home/bg@2x.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    h1 {
+        font-size: 64px;
+        color: $white;
+    }
+
+    .intro-sub {
+        font-size: 18px;
+        line-height: 22px;
+        color: $white;
+    }
+ }
+
+ .hero-container {
+    max-width: 450px;
+    margin: 0 auto;
+ }
+
+ .marketing-benefits {
+    margin: 10% auto 20% auto;
+    color: $lunchline-red;
+
+    h2 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    p.benefits-sub {
+        color: $lunchline-red;
+        font-size: 20px;
+        line-height: 25px;
+        padding: 0 15px;
+    }
+ }
+
+ .marketing-container {
+    background-color: $lunchline-red;
+    color: $white;
+    width: 100%;
+
+
+    .featurette {
+        padding: 10% 0;
+        max-width: 810px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-top: 25px;
+    }
+
+    .lead {
+        color: $white;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 26px;
+        margin-top: 40px;
+    }
+ }
+
 /**
  * Banner Styles
  */

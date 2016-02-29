@@ -14,6 +14,8 @@ Template.addAdult.events({
 			newFamilyMember.firstName = adultFirstName;
 			newFamilyMember.lastName = adultLastName;
 			newFamilyMember.type = type;
+			console.log("new family member on client: ");
+			console.log(newFamilyMember);
 			Meteor.call('addFamilyMember', currentUser, newFamilyMember);
 			Router.go('/householdMembers');
 		// } else {

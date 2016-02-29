@@ -80,6 +80,7 @@
 
 // Meteor.users.attachSchema(Schema.User);
 // if (Meteor.isClient) {
+
   Meteor.methods({
   	'updateUser': function(user) {
   		var profile = user.profile;
@@ -93,7 +94,9 @@
 		console.log("user updated");
   	},
   	'addFamilyMember': function(user, newFamilyMember) {
-  		var familyMembers = user.familyMembers ? user.familyMembers : [];
+      console.log("existing fam members: ");
+      console.log(user.profile.familyMembers);
+  		var familyMembers = user.profile.familyMembers ? user.profile.familyMembers : [];
   		familyMembers.push(newFamilyMember);
 		Meteor.users.update(Meteor.userId(), {$set: {
 			"profile.familyMembers": familyMembers
@@ -156,6 +159,9 @@ if (Meteor.isServer) {
 //     this.response.end('post request\n');
 //   });
 
+Router.route('/', function () {
+  this.render('home');
+});
 Router.route("/signature");
 Router.route('/intro1');
 Router.route('/intro2');

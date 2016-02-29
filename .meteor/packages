@@ -20,7 +20,6 @@ autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 accounts-password
 iron:router
-accounts-ui
 accounts-facebook
 accounts-google
 aldeed:autoform
@@ -29,3 +28,4 @@ forwarder:autoform-wizard
 aldeed:collection2
 twbs:bootstrap
 fourseven:scss
+accounts-ui-unstyled
