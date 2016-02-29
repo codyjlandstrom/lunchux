@@ -99,6 +99,8 @@
       "profile.city" : profile.city,
       "profile.state" : profile.state,
       "profile.zipcode" : profile.zipcode,
+      "profile.isHispanic" : profile.isHispanic,
+      "profile.raceSelected" : profile.raceSelected, // Returns Array
 		}});
 		console.log("user updated");
   	},
@@ -188,3 +190,4 @@ Router.route('/ssn');
 Router.route('/hasAddress');
 Router.route('/address');
 Router.route('/ethnicity');
+Router.route('/applicationReview');
