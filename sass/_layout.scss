@@ -439,6 +439,12 @@
     padding-top: 20px;
 }
 
+.success {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $success;
+}
+
 .container p {
     line-height: 19px;
     color: $body-copy-gray;

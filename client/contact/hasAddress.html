@@ -1,0 +1,30 @@
+<template name="hasAddress">
+
+	{{> header}}
+
+	<div class="container fixed-margin">
+		
+		<h3 class="section-title">Do you have an address where you can receive mail?</h3>
+
+		<p>Don't worry, if you are homeless or don't have a mailing address, this will not impact your eligibility.</p>
+
+		<form id="hasAddressForm">
+			<div class="radio">
+				<label>
+					<input type="radio" name="has-address" value="Yes">
+					Yes
+				</label>
+		  	</div>
+		  	<div class="radio">
+		  		<label>
+		  			<input type="radio" name="has-address" value="No">
+		  			No
+		  		</label>
+		  	</div>
+		  </form>
+
+	</div>
+
+	<a class="bottom-button" href="/address">Next</a>
+	
+</template>

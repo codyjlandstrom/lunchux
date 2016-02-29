@@ -191,3 +191,4 @@ Router.route('/hasAddress');
 Router.route('/address');
 Router.route('/ethnicity');
 Router.route('/applicationReview');
+Router.route('/success');

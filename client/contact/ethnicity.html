@@ -1,0 +1,69 @@
+<template name="ethnicity">
+
+	{{> header}}
+
+	<div class="container fixed-margin">
+		
+		<h3 class="section-title">Childrens' Racial &amp; Ethnic Identities (Optional)</h3>
+
+		<p>We are required to ask for information about your childrens' race and ethnicity. This information is important and helps to make sure we are fully serving our community. This section does not affect your childrens' eligibility for free or reduced price meals.</p>
+
+		<h3 class="section-title">Ethnicity</h3>
+
+		<form id="isHispanicForm">
+			<div class="radio">
+				<label>
+					<input type="radio" name="is-hispanic" value="Hispanic or Latino">
+					Hispanic or Latino
+				</label>
+		  	</div>
+		  	<div class="radio">
+		  		<label>
+		  			<input type="radio" name="is-hispanic" value="Not Hispanic or Latino">
+		  			Not Hispanic or Latino
+		  		</label>
+		  	</div>
+		</form>
+
+		<h3 class="section-title">Race</h3>
+		<p>Select all that apply</p>
+
+		<form id="raceSelectedForm">
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="foster-child" value="Foster Child">
+					Foster Child
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="migrant" value="Migrant">
+					Migrant
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="runaway" value="Runaway">
+					Runaway
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="homeless" value="Homeless">
+					Homeless
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" name="head-start-participant" value="Head Start Participant">
+					Head Start Participant
+				</label>
+			</div>  	
+	  </form>
+
+
+	</div>
+
+	<a class="bottom-button" href="/applicationReview">Next</a>
+	
+</template>
