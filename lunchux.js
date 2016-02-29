@@ -83,14 +83,23 @@
   Meteor.methods({
   	'updateUser': function(user) {
   		var profile = user.profile;
+  		var familyMembers = user.familyMembers;
 		Meteor.users.update(Meteor.userId(), {$set: {
 			"profile.firstName": profile.firstName,
 			"profile.lastName": profile.lastName,
 			"profile.date" : profile.date,
-			"profile.assistanceType" : profile.assistanceType
+			"profile.assistanceType" : profile.assistanceType,
 		}});
 		console.log("user updated");
-  	}
+  	},
+  	'addFamilyMember': function(user, newFamilyMember) {
+  		var familyMembers = user.familyMembers ? user.familyMembers : [];
+  		familyMembers.push(newFamilyMember);
+		Meteor.users.update(Meteor.userId(), {$set: {
+			"profile.familyMembers": familyMembers
+		}});
+		console.log("user updated");
+  	}  	
   });
 // }
 
@@ -153,4 +162,8 @@ Router.route('/intro2');
 Router.route('/assistance');
 Router.route('/addChild');
 Router.route('/addAdult');
-Router.route('/householdMembers')
+Router.route('/householdMembers');
+Router.route('/students');
+Router.route('/status');
+Router.route('/incomeIntro');
+Router.route('/incomeOverview');

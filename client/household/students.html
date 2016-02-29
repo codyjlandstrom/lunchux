@@ -1,0 +1,31 @@
+<template name="students">
+
+	<div class="container">
+
+	  <h3 class="section-title">Which childern are students?</h3>
+	  <p>Household members attending high school grade or under, regardless of age</p>
+
+	  <form>
+	  {{#each familyMembers}}
+	  	<div class="checkbox">
+	      <label>
+	        <input type="checkbox" name="student">
+	        {{firstName}} {{middle}} {{lastName}}
+	      </label>
+	    </div>
+	  {{/each}}
+	    
+	    <!-- <div class="checkbox">
+	      <label>
+	        <input type="checkbox" name="student">
+	        Keaton R. Bedell
+	      </label>
+	    </div> -->
+	  </form>
+
+	</div>
+
+
+	<a class="bottom-button bottom-button-fixed" href="/status">Next</a>
+
+</template>

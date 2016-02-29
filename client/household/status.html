@@ -1,0 +1,70 @@
+<template name="status">
+	
+	<div class="container">
+
+		<div class="member-icon">
+	  		<img src="/imgs/child@2x.png" width="35" height="35"  alt="Child">
+	  		Jess Zhang
+	  	</div>
+
+	  <h3 class="section-title">Is Jess considered a:</h3>
+	  <p>Select all that apply</p>
+
+	  <form>
+	  	<div class="checkbox">
+	  		<label>
+	  			<input type="checkbox" name="foster-child">
+	        Foster Child
+	  		</label>
+	  	</div>
+	    <div class="checkbox">
+	      <label>
+	        <input type="checkbox" name="migrant">
+	        Migrant
+	      </label>
+	    </div>
+	    <div class="checkbox">
+	      <label>
+	        <input type="checkbox" name="runaway">
+	        Runaway
+	      </label>
+	    </div>
+	    <div class="checkbox">
+	      <label>
+	        <input type="checkbox" name="homeless">
+	        Homeless
+	      </label>
+	    </div>
+	    <div class="checkbox">
+	      <label>
+	        <input type="checkbox" name="head-start-participant">
+	        Head Start Participant
+	      </label>
+	    </div>  	
+	  </form>
+
+	</div>
+
+
+<a class="bottom-button bottom-button-fixed" href="/incomeIntro">No, None of these apply</a>
+
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+	  var accordionsMenu = $('.accordion');
+
+	  if( accordionsMenu.length > 0 ) {
+	    
+	    accordionsMenu.each(function(){
+	      var accordion = $(this);
+	      //detect change in the input[type="checkbox"] value
+	      accordion.on('change', 'input[type="checkbox"]', function(){
+	        var checkbox = $(this);
+	        console.log(checkbox.prop('checked'));
+	        ( checkbox.prop('checked') ) ? checkbox.siblings('ul').attr('style', 'display:none;').slideDown(300) : checkbox.siblings('ul').attr('style', 'display:block;').slideUp(300);
+	      });
+	    });
+	  }
+	});
+</script>
+
+</template>

@@ -1,10 +1,11 @@
-Template.householdMembers.onRendered(function() {
+Template.incomeOverview.onRendered(function() {
 	Session.set('currentUser', Meteor.user());
 });
 
-Template.householdMembers.helpers({
+
+Template.incomeOverview.helpers({
 	'user': function() {
-		return Meteor.user().profile;
+		return Meteor.user();
 	},
 	'familyMembers': function() {
 		return Meteor.user().profile.familyMembers;
