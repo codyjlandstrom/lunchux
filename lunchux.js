@@ -80,6 +80,7 @@
 
 // Meteor.users.attachSchema(Schema.User);
 // if (Meteor.isClient) {
+      // Ideally this would be run from client. Meteor not allowing this for some reason. Needs further troubleshooting.
 
   Meteor.methods({
   	'updateUser': function(user) {
@@ -90,6 +91,14 @@
 			"profile.lastName": profile.lastName,
 			"profile.date" : profile.date,
 			"profile.assistanceType" : profile.assistanceType,
+      "profile.hasSSN" : profile.hasSSN,
+      "profile.SSN" : profile.SSN, // Must be hashed for Security
+      "profile.hasAddress" : profile.hasAddress,
+      "profile.streetAddress1" : profile.streetAddress1,
+      "profile.streetAddress2" : profile.streetAddress2,
+      "profile.city" : profile.city,
+      "profile.state" : profile.state,
+      "profile.zipcode" : profile.zipcode,
 		}});
 		console.log("user updated");
   	},
@@ -174,3 +183,8 @@ Router.route('/status');
 Router.route('/incomeIntro');
 Router.route('/incomeEntry');
 Router.route('/incomeOverview');
+Router.route('/contactIntro');
+Router.route('/ssn');
+Router.route('/hasAddress');
+Router.route('/address');
+Router.route('/ethnicity');
