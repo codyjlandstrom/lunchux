@@ -172,4 +172,5 @@ Router.route('/householdMembers');
 Router.route('/students');
 Router.route('/status');
 Router.route('/incomeIntro');
+Router.route('/incomeEntry');
 Router.route('/incomeOverview');

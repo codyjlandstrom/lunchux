@@ -1,9 +1,9 @@
-Template.incomeOverview.onRendered(function() {
+Template.incomeEntry.onRendered(function() {
 	Session.set('currentUser', Meteor.user());
 });
 
 
-Template.incomeOverview.helpers({
+Template.incomeEntry.helpers({
 	'user': function() {
 		return Meteor.user().profile;
 	},

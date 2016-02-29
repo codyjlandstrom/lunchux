@@ -1,0 +1,96 @@
+<template name="incomeEntry">
+
+	{{> header}}
+	
+	<div class="container fixed-margin">
+
+	  <h3 class="section-title">{{user.firstName}}'s Income (0)</h3>
+	  
+	  <hr>
+
+	  <ul class="accordion animated">
+	    <li class="has-children">
+	      <input type="checkbox" name="group1" id="group-1">
+	      <label for="group-1">Work</label>
+	      
+	      <ul>
+	        <li><a href="#0">Wages</a></li>
+	        <li><a href="#0">Cash Bonuses</a></li>
+	        <li><a href="#0">Strike Benefits</a></li>
+	        <li><a href="#0">Self-Employment Income</a></li>
+	        <li><a href="#0">Gift</a></li>
+	      </ul>
+
+	    </li>
+
+	    <li class="has-children">
+	      <input type="checkbox" name="group2" id="group-2">
+	      <label for="group-2">Military Income</label>
+	      
+	      <ul>
+	        <li><a href="#0">Option</a></li>
+	        <li><a href="#0">Option</a></li>
+	      </ul>
+
+	    </li>
+
+	    <li class="has-children">
+	      <input type="checkbox" name="group3" id="group-3">
+	      <label for="group-3">Public Assistance</label>
+	      
+	      <ul>
+	        <li><a href="#0">Unemployment Benefits</a></li>
+	        <li><a href="#0">Workers' Compensation</a></li>
+	        <li><a href="#0">Vetran's Benefits</a></li>
+	        <li><a href="#0">Cash assistance from state or local government</a></li>
+	        <li><a href="#0">Supplemental Security Income (SSI)</a></li>
+	      </ul>
+
+	    </li>
+
+	    <li class="has-children">
+	      <input type="checkbox" name="group4" id="group-4">
+	      <label for="group-4">Alimony/Child Support</label>
+	      
+	      <ul>
+	        <li><a href="#0">Alimony</a></li>
+	        <li><a href="#0">Child Support</a></li>
+	      </ul>
+
+	    </li>
+
+	    <li class="has-children">
+	      <input type="checkbox" name="group5" id="group-5">
+	      <label for="group-5">Retirement/SSN</label>
+	      
+	      <ul>
+	        <li><a href="#0">Social Security</a></li>
+	        <li><a href="#0">Private Pensions or Disability</a></li>
+	      </ul>
+
+	    </li>
+
+	    <li class="has-children">
+	      <input type="checkbox" name="group6" id="group-6">
+	      <label for="group-6">All Other Income</label>
+	      
+	      <ul>
+	        <li><a href="#0">Income from Trusts or Estates</a></li>
+	        <li><a href="#0">Annuities</a></li>
+	        <li><a href="#0">Investment Income</a></li>
+	        <li><a href="#0">Rental Income</a></li>
+	        <li><a href="#0">Gift</a></li>
+	        <li><a href="#0">Regular Cash Payments from Outside Household</a></li>
+	        <li><a href="#0">Other</a></li>
+	      </ul>
+
+	    </li>
+	  </ul>
+
+	</div>
+
+	<!-- Ideally this Checks DB for Income Entered -->
+	<a class="bottom-button bottom-button-fixed" href="/incomeOverview">No Source of Income</a>
+
+
+</template>
