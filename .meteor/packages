@@ -22,9 +22,7 @@ accounts-password
 iron:router
 accounts-facebook
 accounts-google
-aldeed:autoform
 aldeed:simple-schema
-forwarder:autoform-wizard
 aldeed:collection2
 twbs:bootstrap
 fourseven:scss
