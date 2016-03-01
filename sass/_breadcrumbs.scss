@@ -363,6 +363,11 @@ Multi steps indicator
 			color: $color-1;
 		}
 	}
+	@media (min-width: 768px) {
+		.cd-multi-steps li {
+			margin: 0.4em 35px 2.4em 0;
+		}
+	}
 
 	.cd-multi-steps.custom-separator li::after {
 		/* reset style */
@@ -413,6 +418,11 @@ Multi steps indicator
 				left: 50%;
 				/* 40px is the <li> right margin value */
 				width: calc(100% + 40px);
+			}
+		}
+		@media (min-width: 768px) {
+			li {
+				width: 15%;
 			}
 		}
 
@@ -507,6 +517,15 @@ Add a counter to the multi-steps indicator
 		font-size: 8px;
 		color: $color-3;
 	}
+	@media (min-width: 768px) {
+    	.cd-multi-steps.text-top.count li > *::before, 
+		.cd-multi-steps.text-bottom.count li > *::before {
+			height: 40px;
+			width: 40px;
+			line-height: 40px;
+			font-size: 20px;
+    	}
+	}
 
 	.cd-multi-steps.text-top.count li:not(.current) em::before, 
 	.cd-multi-steps.text-bottom.count li:not(.current) em::before  {
@@ -525,6 +544,12 @@ Add a counter to the multi-steps indicator
 	.cd-multi-steps.text-bottom.count li::after {
 		top: 11px;
 	}
+	@media (min-width: 768px) {
+		.cd-multi-steps.text-bottom.count li::after {
+			top: 25px;
+		}
+	}
+
 
 	.cd-multi-steps.text-bottom.count li > * {
 		padding-top: 12px;

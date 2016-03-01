@@ -40,6 +40,11 @@
         float: left;
         margin-left: 15px;
     }
+    @media (min-width: 768px) {
+        .back {
+            display: none;
+        }
+    }
 }
 
 .navbar-inverse {
@@ -64,6 +69,31 @@
 
     img {
         display: inline;
+    }
+}
+@media (min-width: 768px) {
+    .navbar-brand {
+        float: left;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: $white;
+    }
+
+    .navbar-collapse {
+        float: right;
+
+        a {
+            color: $white;
+        }
+
+        .nav-button {
+            border: 1px solid $white;
+            border-radius: 8px;
+            padding: 5px 18px;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
     }
 }
 
@@ -157,7 +187,25 @@
  * Homepage Marketing Styles
  */
 
- // Sign in
+ #headerFlush {
+    .navbar.navbar-inverse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+        border-color: transparent;
+        box-shadow: none;
+    }
+ }
+
+ // Log in
+
+ .login-container {
+    width: 337px;
+    margin: 0 auto;
+    padding-bottom: 10%;
+ }
 
  .sign-in-text-facebook, .sign-in-text-google {
     background-repeat: no-repeat;
@@ -166,7 +214,7 @@
     height: 47px;
     display: block;
     text-indent: -9999px;
-    margin: 0 auto;
+    margin: 10px auto;
  }
  .sign-in-text-google {
     background-image: url('/imgs/home/google_sign_up_button@2x.png');
@@ -175,9 +223,41 @@
     background-image: url('/imgs/home/facebook_sign_up@2x.png');
  }
 
- .login-close-text, .login-link-text {
+ .login-close-text, .login-link-text, .login-password-form {
     display: none;
  }
+ .or {
+    color: $white;
+    margin-bottom: 10px;
+ }
+
+ .login {
+
+    input.form-control {
+        background-color: transparent;
+        color: $white;
+        border-color: $white;
+        &::-webkit-input-placeholder {
+            color: $white;
+        }
+        &::-moz-placeholder {
+            color: $white;
+        }
+        &:-ms-input-placeholder {
+            color: $white;
+        }
+    }
+
+    input.sign-up {
+        background-color: #FF9078;
+        font-weight: bold;
+        font-size: 20px;
+        border: none;
+    }
+
+}
+
+// Homepage marketing sections
 
  .marketing-intro {
     width: 100%;
@@ -188,6 +268,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    padding-top: 15%;
 
     h1 {
         font-size: 64px;
@@ -268,7 +349,6 @@
  }
 
 
-
 /**
  * Form Styles
  */
@@ -278,7 +358,6 @@
     height: 200px;
     margin: 30px 0;
     padding: 0 10px;
-    border-radius: 8px;
 }
 @media (min-width: 768px) {
     .terms {
@@ -295,7 +374,15 @@
 }
 
 .radio {
-    font-size: 18px;
+    font-size: 20px;
+
+    label {
+        padding-left: 60px;
+    }
+}
+
+.radio input[type="radio"] {
+    margin-left: -40px;
 }
 
 .radio-tip {
@@ -309,7 +396,9 @@
     border-color: $gray;
     font-size: 18px;
     color: $dark-gray;
+    cursor: initial;
 }
+
 
 .form-group {
     margin-bottom: 20px;
@@ -385,6 +474,16 @@
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+@media (min-width: 768px) {
+    .bottom-button, .default-button, .bottom-button-fixed {
+        position: relative;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 8px;
+    }
 }
 
 .disabled {
@@ -483,6 +582,12 @@
     font-weight: bold;
     padding-top: 20px;
 }
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 24px;
+        line-height: 26px;
+    }
+}
 
 .success {
     font-weight: bold;
@@ -579,6 +684,7 @@ img {
 
 .hidden-form {
     display: none;
+    margin-top: 10px;
 }
 
 
@@ -605,9 +711,9 @@ $L:     1170px;
   @if $canvas == S {
    @media only screen and (min-width: $S) { @content; } 
   }
-  @else if $canvas == M {
-   @media only screen and (min-width: $M) { @content; } 
-  }
+  // @else if $canvas == M {
+  //  @media only screen and (min-width: $M) { @content; } 
+  // }
   @else if $canvas == L {
    @media only screen and (min-width: $L) { @content; } 
   }

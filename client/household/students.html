@@ -4,26 +4,25 @@
 
 	<div class="container fixed-margin">
 
-	  <h3 class="section-title">Which childern are students?</h3>
-	  <p>Household members attending high school grade or under, regardless of age</p>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				
+				<h3 class="section-title">Which childern are students?</h3>
+				<p>Household members attending high school grade or under, regardless of age</p>
 
-	  <form>
-	  {{#each familyMembers}}
-	  	<div class="checkbox">
-	      <label>
-	        <input type="checkbox" name="student">
-	        {{firstName}} {{middle}} {{lastName}}
-	      </label>
-	    </div>
-	  {{/each}}
-	    
-	    <!-- <div class="checkbox">
-	      <label>
-	        <input type="checkbox" name="student">
-	        Keaton R. Bedell
-	      </label>
-	    </div> -->
-	  </form>
+				<form>
+				  {{#each familyMembers}}
+				  	<div class="checkbox">
+						<label>
+							<input type="checkbox" class="form-{{type}}" name="student">
+								{{firstName}} {{middle}} {{lastName}}
+							</label>
+				    </div>
+				  {{/each}}
+				</form>
+
+			</div>
+		</div>
 
 	</div>
 
