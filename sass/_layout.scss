@@ -59,6 +59,10 @@
     }
 }
 
+.navbar-collapse {
+    
+}
+
 .navbar-header {
     text-align: center;
     float: none;
@@ -275,9 +279,15 @@
     padding-top: 15%;
 
     h1 {
-        font-size: 64px;
+        font-size: 36px;
         color: $white;
     }
+    @media (min-width: 768px) {
+        h1 {
+            font-size: 64px;
+        }
+    }
+
 
     .intro-sub {
         font-size: 18px;
