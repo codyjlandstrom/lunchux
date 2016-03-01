@@ -12,7 +12,7 @@ Template.hasAddress.events({
 			profile.hasAddress = hasAddress;
 			Meteor.call('updateUser', currentUser);
 			if (hasAddress == 'No') {
-				Router.go('/ethnicity');
+				Router.go('/phoneNumber');
 			} else {
 				Router.go('/address');
 			}

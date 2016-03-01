@@ -205,6 +205,7 @@ Router.route('/contactIntro');
 Router.route('/ssn');
 Router.route('/hasAddress');
 Router.route('/address');
+Router.route('phoneNumber');
 Router.route('/ethnicity');
 Router.route('/applicationReview');
 Router.route('/success');

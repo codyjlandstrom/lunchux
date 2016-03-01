@@ -19,7 +19,7 @@ Template.address.events({
 			profile.state = state;
 			profile.zipcode = zipcode;
 			Meteor.call('updateUser', currentUser);
-			Router.go('/ethnicity');
+			Router.go('/phoneNumber');
 		// } else {
 		// 	console.log('nope')
 		// }

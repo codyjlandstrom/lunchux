@@ -1,0 +1,25 @@
+<template name="phoneNumber">
+	
+	{{> header}}
+
+	<div class="container fixed-margin">
+		<div class="row">
+			{{> desktopBack}}
+			<div class="col-md-6 col-md-offset-2">
+		
+				<h3 class="section-title">At what number can we call you?</h3>
+
+				<p>We need this to contact you about the status of your application.</p>
+
+				<form id="phoneNumber">
+					<input type="text" id="" class="form-control" placeholder="Phone Number (Optional)" value="{{user.phoneNumber}}">
+				</form>
+
+				<a class="bottom-button" href="/ethnicity">Next</a>
+
+			</div>
+		</div>
+
+	</div>
+
+</template>
