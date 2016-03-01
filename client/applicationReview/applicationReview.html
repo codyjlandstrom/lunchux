@@ -3,50 +3,62 @@
 	{{> header}}
 	
 	<div class="container fixed-margin">
+		<div class="row">
+			{{> desktopBack}}
+			<div class="col-md-6 col-md-offset-2">
 
-	  <h3 class="section-title" center>Last Step! Let's Review</h3>
-	  <p>Time to review your answers. If you see anything wrong, select it and we will help you quickly edit it.</p>
+	  			<h3 class="section-title" center>Last Step! Let's Review</h3>
+	  			<p>Time to review your answers. If you see anything wrong, select it and we will help you quickly edit it.</p>
 
-	  <hr>
+	  			<hr>
 	  
 
-	  <ul class="accordion animated">
-	  	<!-- Review for main user -->
-	  	<li class="has-children">
+				<ul class="accordion animated">
+					<!-- Review for main user -->
+					<li class="has-children">
 
-	      <input type="checkbox" name="groupUser" id="group-User">
-	      <label for="group-User">{{user.firstName}} {{user.lastName}}</label>
-	      
-	      <ul>
-	        <li><a href="#0">Wages</a></li>
-	        <li><a href="#0">Cash Bonuses</a></li>
-	        <li><a href="#0">Strike Benefits</a></li>
-	      </ul>
+				  <input type="checkbox" name="groupUser" id="group-User">
+				  <label for="group-User">{{user.firstName}} {{user.lastName}}</label>
+				  
+				  <ul>
+				    <li><a href="#0">Wages</a></li>
+				    <li><a href="#0">Cash Bonuses</a></li>
+				    <li><a href="#0">Strike Benefits</a></li>
+				  </ul>
 
-	    </li>
+				</li>
 
-	    <!-- Loop for each family member in array -->
-	  	{{#each familyMembers}}
-	  	<li class="has-children">
+				<!-- Loop for each family member in array -->
+					{{#each familyMembers}}
+					<li class="has-children">
 
-	      <input type="checkbox" name="group{{@index}}" id="group-{{@index}}">
-	      <label for="group-{{@index}}">{{firstName}} {{middle}} {{lastName}}</label>
-	      
-	      <ul>
-	        <li><a href="#0">Wages</a></li>
-	        <li><a href="#0">Cash Bonuses</a></li>
-	        <li><a href="#0">Strike Benefits</a></li>
-	      </ul>
+				  <input type="checkbox" name="group{{@index}}" id="group-{{@index}}">
+				  <label for="group-{{@index}}">{{firstName}} {{middle}} {{lastName}}</label>
+				  
+				  <ul>
+				    <li><a href="#0">Wages</a></li>
+				    <li><a href="#0">Cash Bonuses</a></li>
+				    <li><a href="#0">Strike Benefits</a></li>
+				  </ul>
 
-	    </li>
-	  	{{/each}}
-	    
-	  </ul>
+				</li>
+					{{/each}}
+
+				</ul>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<br><br>
+				<p class="center">I've Reviewed My Answers.</p>
+			</div>
+		</div>
 
 	</div>
 
 	<!-- Ideally this Checks DB for Income Entered -->
-	<a class="bottom-button bottom-button-fixed" href="/success">I've Reviewed My Answers. Submit Application</a>
+	<a class="bottom-button bottom-button-fixed" href="/success">Submit Application</a>
 
 
 </template>
