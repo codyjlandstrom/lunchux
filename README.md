@@ -15,7 +15,7 @@ If you're on Windows
 [Download the Windows Installer from Meteor](https://install.meteor.com/windows)
 
 Clone this repo:
-`link to clone repo`
+`https://github.com/codyjlandstrom/lunchux.git`
 
 To run the application
 

@@ -33,6 +33,9 @@
         .navbar-nav>.active>a {
             background-color: $lunchline-red;
         }
+        .navbar-nav > li > a {
+            color: $white;
+        }
     }
 
     .back {
@@ -44,6 +47,10 @@
         .back {
             display: none;
         }
+    }
+
+    .navbar-collapse {
+        border-color: $white;
     }
 }
 
@@ -281,7 +288,11 @@
         font-size: 20px;
         border: none;
     }
+}
 
+.login-button {
+    color: $white;
+    margin-bottom: 10px;
 }
 
 // Homepage marketing sections
