@@ -60,7 +60,7 @@
 }
 
 .navbar-collapse {
-    
+
 }
 
 .navbar-header {
@@ -191,6 +191,22 @@
         margin-top: 160px;
     }
 }
+
+.desktopBack {
+    color: $white;
+    font-size: 18px;
+    background-image: url('/imgs/back_mobile@2x.png');
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 28px;
+
+    &:hover {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
 /**
  * Homepage Marketing Styles
  */
@@ -670,6 +686,10 @@ img {
     color: $white;
     background-color: $lunchline-red;
     min-height: 100vh;
+
+    .container {
+        padding-top: 120px;
+    }
 
     .section-title {
         color: $white;

@@ -10,7 +10,7 @@ Template.header.events({
 	'click a.back': function(){
 		parent.history.back();
 		return false;
-	}
+	},
 	// 'click .bottom-button': function(event){
 	// 	event.preventDefault();
 	// 	var streetAddress1 = $('#contactStreetAddress1').val();
