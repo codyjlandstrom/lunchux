@@ -502,7 +502,41 @@ Add a counter to the multi-steps indicator
 }
 
 .cd-multi-steps.count li > *::before {
-	content: counter(steps) " - ";
+		content: counter(steps) " - ";
+	}
+
+@media (min-width: 768px) {
+
+	.cd-multi-steps .progress-1 > *::before {
+		background-image: url('/imgs/progress/1@2x.png');
+	    background-size: 39px;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	}
+	.cd-multi-steps .progress-2 > *::before {
+		background-image: url('/imgs/progress/2@2x.png');
+	    background-size: 39px;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	}
+	.cd-multi-steps .progress-3 > *::before {
+		background-image: url('/imgs/progress/3@2x.png');
+	    background-size: 39px;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	}
+	.cd-multi-steps .progress-4 > *::before {
+		background-image: url('/imgs/progress/4@2x.png');
+	    background-size: 39px;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	}
+	.cd-multi-steps .progress-5 > *::before {
+		background-image: url('/imgs/progress/5@2x.png');
+	    background-size: 39px;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	}
 }
 
 // @include MQ(M) {
@@ -520,9 +554,10 @@ Add a counter to the multi-steps indicator
 	@media (min-width: 768px) {
     	.cd-multi-steps.text-top.count li > *::before, 
 		.cd-multi-steps.text-bottom.count li > *::before {
-			height: 40px;
-			width: 40px;
-			line-height: 40px;
+			content: '';
+			height: 41px;
+			width: 41px;
+			line-height: 41px;
 			font-size: 20px;
     	}
 	}
