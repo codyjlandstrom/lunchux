@@ -182,7 +182,11 @@
 .fixed-margin {
     margin-top: 130px;
 }
-
+@media (min-width: 768px) {
+    .fixed-margin {
+        margin-top: 160px;
+    }
+}
 /**
  * Homepage Marketing Styles
  */
@@ -749,6 +753,7 @@ $L:     1170px;
         padding: 10px 0;
         color: $lunchline-red;
         font-weight: bold;
+        border-bottom: 1px solid #EAEAEA;
 
         .no-touch &:hover {
             
@@ -772,6 +777,7 @@ $L:     1170px;
 
     label {
         cursor: pointer;
+        border-color: $gray;
 
         &::before, &::after {
             
