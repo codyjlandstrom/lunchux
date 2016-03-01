@@ -16,6 +16,9 @@ Template.assistance.events({
 		} else {
 			console.log('nope')
 		}
+	},
+	'click .open-form': function(event){
+		$('.hidden-form').css("display", "block");
 	}
 })
 

@@ -34,7 +34,12 @@ $success: #55BC92;
 /**
  * Basic styling
  */
+html {
+    height: 100%;
+}
+
 body {
+    min-height: 100%;
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
     background-color: $background-color;

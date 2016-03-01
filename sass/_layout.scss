@@ -34,6 +34,24 @@
             background-color: $lunchline-red;
         }
     }
+
+    .back {
+        position: relative;
+        float: left;
+        margin-left: 15px;
+    }
+}
+
+.navbar-inverse {
+
+  .navbar-toggle {
+        border: none;
+        padding: 0;
+
+        .icon-bar {
+            height: 3px;
+        }
+    }
 }
 
 .navbar-header {
@@ -139,6 +157,28 @@
  * Homepage Marketing Styles
  */
 
+ // Sign in
+
+ .sign-in-text-facebook, .sign-in-text-google {
+    background-repeat: no-repeat;
+    background-size: 337px;
+    width: 337px;
+    height: 47px;
+    display: block;
+    text-indent: -9999px;
+    margin: 0 auto;
+ }
+ .sign-in-text-google {
+    background-image: url('/imgs/home/google_sign_up_button@2x.png');
+ }
+ .sign-in-text-facebook {
+    background-image: url('/imgs/home/facebook_sign_up@2x.png');
+ }
+
+ .login-close-text, .login-link-text {
+    display: none;
+ }
+
  .marketing-intro {
     width: 100%;
     background-image: url('/imgs/home/bg@2x.jpg');
@@ -239,6 +279,11 @@
     margin: 30px 0;
     padding: 0 10px;
     border-radius: 8px;
+}
+@media (min-width: 768px) {
+    .terms {
+        height: 385px;
+    }
 }
 
 .form-control {
@@ -502,6 +547,7 @@ img {
 .inverse {
     color: $white;
     background-color: $lunchline-red;
+    min-height: 100vh;
 
     .section-title {
         color: $white;
@@ -529,6 +575,10 @@ img {
             text-decoration: none;
         }
     }
+}
+
+.hidden-form {
+    display: none;
 }
 
 
@@ -795,44 +845,44 @@ $L:     1170px;
 /**
  * Posts
  */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
+// .post-header {
+//     margin-bottom: $spacing-unit;
+// }
 
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
+// .post-title {
+//     font-size: 42px;
+//     letter-spacing: -1px;
+//     line-height: 1;
 
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
-}
+//     @include media-query($on-laptop) {
+//         font-size: 36px;
+//     }
+// }
 
-.post-content {
-    margin-bottom: $spacing-unit;
+// .post-content {
+//     margin-bottom: $spacing-unit;
 
-    h2 {
-        font-size: 32px;
+//     h2 {
+//         font-size: 32px;
 
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
+//         @include media-query($on-laptop) {
+//             font-size: 28px;
+//         }
+//     }
 
-    h3 {
-        font-size: 26px;
+//     h3 {
+//         font-size: 26px;
 
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
+//         @include media-query($on-laptop) {
+//             font-size: 22px;
+//         }
+//     }
 
-    h4 {
-        font-size: 20px;
+//     h4 {
+//         font-size: 20px;
 
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
-}
+//         @include media-query($on-laptop) {
+//             font-size: 18px;
+//         }
+//     }
+// }

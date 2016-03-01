@@ -22,8 +22,12 @@ Template.signature.events({
 	}
 })
 
+
 Template.signature.helpers({
 	'user': function() {
 		return Meteor.user().profile;
+	},
+	isCurrent: function (name) {
+		return name === "current"
 	}
 })

@@ -1,15 +1,18 @@
 <template name="assistance">
 
-	<div class="container">
+{{> header}}
+
+	<div class="container fixed-margin">
 
 	  <h3 class="section-title">Is anyone in your household part of an Assistance Program?</h3>
 
 	  <form id="assistanceForm">
-	  	<div class="radio">
+	  	<div class="radio open-form">
 	  		<label>
 	  			<input type="radio" name="assistance-program" value="SNAP">
 	  			Yes, SNAP
 	  			<span class="radio-tip">Supplemental Nutrition Assistance Program</span>
+	  			<input type="text" id="snapCaseNumber" class="form-control hidden-form" placeholder="Case Number" value="">
 	  		</label>
 	  	</div>
 	  	<div class="radio">
@@ -36,5 +39,5 @@
 
 	</div>
 
-<a class="bottom-button" href="/householdMembers">Next</a>
+<a class="bottom-button bottom-button-fixed" href="/householdMembers">Next</a>
 </template>
