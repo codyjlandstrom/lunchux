@@ -1,13 +1,31 @@
-Template.login.onRendered(function() {
-	Session.set('currentUser', Meteor.user());
-});
+// Template.login.onRendered(function() {
+// 	Session.set('currentUser', Meteor.user());
+// });
+
+// Template.login.events({
+//     'submit form': function(event){
+//         event.preventDefault();
+//         var email = $('[name=email]').val();
+//         var password = $('[name=password]').val();
+//         Meteor.loginWithPassword(email, password);
+//         Router.go('/signature');
+//     }
+// });
 
 Template.login.events({
     'submit form': function(event){
         event.preventDefault();
         var email = $('[name=email]').val();
         var password = $('[name=password]').val();
-        Meteor.loginWithPassword(email, password);
-        Router.go('/signature');
+        Accounts.createUser({
+            email: email,
+            password: password,
+            profile: {
+            	firstName: '',
+            	lastName: '',
+            	date: ''
+            }
+        });
+        Router.go('signature');
     }
 });

@@ -9,7 +9,7 @@ Template.signature.events({
 		var lastName = $('#signatureLastName').val();
 		var date = $('#signatureDate').val();		
 		if (firstName !== '' && lastName !== '' && date !== '') {
-			var currentUser = Session.get('currentUser');
+			var currentUser = Meteor.user();
 			currentUser.profile.firstName = firstName;
 			currentUser.profile.lastName = lastName;
 			currentUser.profile.date = date;
