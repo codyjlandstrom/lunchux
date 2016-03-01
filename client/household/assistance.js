@@ -22,7 +22,7 @@ Template.assistance.events({
 	}
 })
 
-Template.signature.helpers({
+Template.assistance.helpers({
 	'user': function() {
 		return Meteor.user().profile;
 	}

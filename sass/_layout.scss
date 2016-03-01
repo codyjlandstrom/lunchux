@@ -718,6 +718,10 @@ img {
         &:visited {
             color: $white;
         }
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
         &:active {
             background-color: $white;
             color: $lunchline-red;

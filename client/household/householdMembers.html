@@ -22,6 +22,11 @@
 
 	</div>
 
-	<a class="bottom-button" href="/students">Save Household Members</a>
+	<a class="bottom-button" href="/students">Save <span></span> Household Members</a>
+
+	<script type="text/javascript">
+		var n = $( 'input' ).length;
+		$('.bottom-button span').text(n);
+	</script>
 
 </template>

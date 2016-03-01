@@ -10,10 +10,9 @@ Template.signature.events({
 		var date = $('#signatureDate').val();		
 		if (firstName !== '' && lastName !== '' && date !== '') {
 			var currentUser = Session.get('currentUser');
-			var profile = currentUser.profile;
-			profile.firstName = firstName;
-			profile.lastName = lastName;
-			profile.date = date;
+			currentUser.profile.firstName = firstName;
+			currentUser.profile.lastName = lastName;
+			currentUser.profile.date = date;
 			Meteor.call('updateUser', currentUser);
 			Router.go('/intro1');
 		} else {
