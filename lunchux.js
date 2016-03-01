@@ -127,6 +127,8 @@ if (Meteor.isClient) {
       "profile.zipcode" : profile.zipcode,
       "profile.isHispanic" : profile.isHispanic,
       "profile.raceSelected" : profile.raceSelected, // Returns Array
+      "profile.wageFrequency" : profile.wageFrequency,
+      "profile.wageAmount" : profile.wageAmount,
 		}});
 		console.log("user updated");
   	},
@@ -179,22 +181,7 @@ if (Meteor.isServer) {
 
 }
 
-// Router.route('/signature', function() {
-// 	console.log("/signature page loaded");
-// 	this.render("/signature");
-// 	.post(function () {
-//     this.response.end('post request\n');
-//   });
-// });
 
-// Router.route('/signature', {where: 'server'})
-//   .get(function () {
-//    this.render("/signature");
-//   })
-//   .post(function () {
-//   	console.log("post request recieved")
-//     this.response.end('post request\n');
-//   });
 
 Router.route('/', function () {
   this.render('home');
@@ -210,7 +197,9 @@ Router.route('/students');
 Router.route('/status');
 Router.route('/incomeIntro');
 Router.route('/incomeEntry');
+Router.route('/incomeEntryUpdated');
 Router.route('/addWages');
+Router.route('/wageAmount');
 Router.route('/incomeOverview');
 Router.route('/contactIntro');
 Router.route('/ssn');

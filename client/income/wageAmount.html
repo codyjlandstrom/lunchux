@@ -1,0 +1,28 @@
+<template name="wageAmount">
+
+  <div class="banner">
+    <h2 class="center">Add Wages</h2>
+  </div>
+
+  <div class="container wages">
+
+  	<div class="row">
+		{{> desktopBack}}
+		<div class="col-md-4 col-md-offset-3">
+
+			<h3>{{user.wageFrequency}} I receive</h3>
+
+      <div class="form-group">
+        <form>
+          <input type="text" id="wageAmount" class="form-control" placeholder="$" value="{{user.wageAmount}}">
+        </form>
+      </div>
+
+		</div>
+	</div>
+
+    <a class="default-button" href="/IncomeEntryUpdated">Save</a>
+
+  </div>
+
+</template>

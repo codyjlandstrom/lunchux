@@ -3,26 +3,37 @@
 	{{> header}}
 
 	<div class="container fixed-margin">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				
+				<h3 class="section-title">
+					Thanks for saving your income. <br><br>We’ll repeat this process to confirm information for everyone in your household.
+					<br><br>
+				</h3>
 
-		<h3 class="section-title">
-			Thanks for saving {{user.firstName}}'s income. <br><br>We’ll repeat this process to confirm information for everyone in your household. 
-		</h3>
+				<p>If a member has no income, select their name and confirm No Source of Income on the next page.</p>
+				<p>Don’t know others’ income? <a href="">Email Them To Ask</a></p>
 
-		<p>If a member has no income, select their name and confirm No Source of Income on the next page.</p>
-		<p>Don’t know others’ income? <a href="">Email Them To Ask</a></p>
-
-		<div class="form-group">
-			<form>
-				<input type="text" class="form-control form-adult" value="{{user.firstName}} {{user.lastName}}" disabled="true">
-				{{#each familyMembers}}
-				<input type="text" class="form-control form-{{type}}" value="{{firstName}} {{middle}} {{lastName}}" disabled="true">
-				{{/each}}
-			</form>
+			</div>
 		</div>
 
-		<a class="bottom-button" href="/contactIntro">Next</a>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-1">
+				<div class="form-group income-overview">
+					<form>
+						<input type="text" class="form-control form-adult" value="{{user.firstName}}'s Income" disabled="true">
+						{{#each familyMembers}}
+						<input type="text" class="form-control form-{{type}} to-complete" value="{{firstName}}'s Income" disabled="true">
+						{{/each}}
+					</form>
+				</div>
+
+			</div>
+		</div>
 		
 	</div>
+
+	<a class="bottom-button md-left" href="/contactIntro">Next</a>
 	
 
 

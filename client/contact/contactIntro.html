@@ -1,15 +1,23 @@
 <template name="contactIntro">
+	{{> headerFlush}}
+
 	<div class="inverse">
 		<div class="container">
-			
-			<h3 class="section-title center">
-				Thanks for the information. <br>We’re almost done!
-			</h3>
-			<h3>The last section will ask for your contact information so we can reach out when your status is ready.</h3>
 
-			<div class="income-graphic">
-				<img src="/imgs/email@2x.png" alt="Email Image">
+			<div class="row">
+				{{> desktopBack}}
+				<div class="col-md-6 col-md-offset-2">
+					<h3 class="section-title center">
+						Thanks for the information. <br>We’re almost done!
+					</h3>
+					<h3 class="section-title center">The last section will ask for your contact information so we can reach out when your status is ready.<br><br></h3>
+
+					<div class="income-graphic">
+						<img src="/imgs/email@2x.png" alt="Email Image">
+					</div>
+				</div>
 			</div>
+			
 
 			<a class="default-button" href="/ssn">Ok, got it</a>
 

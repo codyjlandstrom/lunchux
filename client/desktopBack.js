@@ -1,15 +1,15 @@
-Template.header.onRendered(function() {
+Template.desktopBack.onRendered(function() {
 	Session.set('currentUser', Meteor.user());
 });
 
-Template.header.events({
-	'click a.back': function(){
+Template.desktopBack.events({
+	'click a.desktopBack': function(){
 		parent.history.back();
 		return false;
 	},
 })
 
-Template.header.helpers({
+Template.desktopBack.helpers({
 	'user': function() {
 		return Meteor.user().profile;
 	}
