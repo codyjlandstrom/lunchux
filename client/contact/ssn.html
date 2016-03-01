@@ -3,29 +3,36 @@
 	{{> header}}
 
 	<div class="container fixed-margin">
+		<div class="row">
+			{{> desktopBack}}
+			<div class="col-md-6 col-md-offset-2">
 		
-		<h3 class="section-title">Do you have a Social Security Number (SSN)?</h3>
+				<h3 class="section-title">Do you have a Social Security Number (SSN)?</h3>
 
-		<p>Don't worry, if you don’t have a SSN, this will not impact your eligibility.</p>
+				<p>Don't worry, if you don’t have a SSN, this will not impact your eligibility.</p>
 
-		<form id="ssnForm">
-			<div class="radio open-form">
-				<label>
-					<input type="radio" name="has-ssn" value="Yes">
-					Yes
-					<input type="text" id="SSN" class="form-control hidden-form" placeholder="SSN" value="{{user.SSN}}">
-				</label>
-		  	</div>
-		  	<div class="radio">
-		  		<label>
-		  			<input type="radio" name="has-ssn" value="No">
-		  			No
-		  		</label>
-		  	</div>
-		  </form>
+				<form id="ssnForm" class="contactForm">
+					<div class="radio open-form">
+						<label>
+							<input type="radio" name="has-ssn" value="Yes">
+							Yes
+							<input type="text" id="SSN" class="form-control hidden-form" placeholder="Last Four Digits of SSN" value="{{user.SSN}}">
+						</label>
+				  	</div>
+				  	<div class="radio">
+				  		<label>
+				  			<input type="radio" name="has-ssn" value="No">
+				  			No
+				  		</label>
+				  	</div>
+				</form>
+
+				<a class="bottom-button" href="/hasAddress">Next</a>
+
+			</div>
+		</div>
 
 	</div>
 
-	<a class="bottom-button" href="/hasAddress">Next</a>
 	
 </template>
