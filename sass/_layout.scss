@@ -193,7 +193,7 @@
 }
 
 .desktopBack {
-    color: $white;
+    color: $gray;
     font-size: 18px;
     background-image: url('/imgs/back_mobile@2x.png');
     background-size: 22px;
@@ -202,10 +202,12 @@
     padding-left: 28px;
 
     &:hover {
-        color: $white;
+        color: $gray;
         text-decoration: none;
     }
 }
+
+
 
 /**
  * Homepage Marketing Styles
@@ -292,11 +294,12 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding-top: 15%;
+    padding-top: 20%;
 
     h1 {
         font-size: 36px;
         color: $white;
+        font-weight: bold;
     }
     @media (min-width: 768px) {
         h1 {
@@ -309,6 +312,7 @@
         font-size: 18px;
         line-height: 22px;
         color: $white;
+        padding: 0 20px;
     }
  }
 
@@ -375,6 +379,11 @@
         font-size: 18px;
         color: $white;
         line-height: 65px;
+    }
+ }
+ @media (min-width: 768px) {
+    .banner {
+        margin-bottom: 40px;
     }
  }
 
@@ -720,6 +729,14 @@ img {
         &:active {
             background-color: $white;
             color: $lunchline-red;
+            text-decoration: none;
+        }
+    }
+
+    .desktopBack {
+        color: $white;
+        &:hover {
+            color: $white;
             text-decoration: none;
         }
     }

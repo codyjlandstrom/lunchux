@@ -210,6 +210,7 @@ Router.route('/students');
 Router.route('/status');
 Router.route('/incomeIntro');
 Router.route('/incomeEntry');
+Router.route('/addWages');
 Router.route('/incomeOverview');
 Router.route('/contactIntro');
 Router.route('/ssn');

@@ -4,46 +4,55 @@
 	
 	<div class="container fixed-margin">
 
-		<div class="member-icon">
-	  		<img src="/imgs/child@2x.png" width="35" height="35"  alt="Child">
-	  		{{familyMembers.[0].firstName}} {{familyMembers.[0].middle}} {{familyMembers.[0].lastName}}
-	  	</div>
+		<div class="row">
+			<div class="col-md-1 hidden-xs hidden-sm">
+				<a href="#" class="desktopBack">Back</a>
+			</div>
+			<div class="col-md-10">
 
-	  <h3 class="section-title">Is {{familyMembers.[0].firstName}} considered a:</h3>
-	  <p>Select all that apply</p>
+				<div class="member-icon">
+			  		<img src="/imgs/child@2x.png" width="35" height="35"  alt="Child">
+			  		{{familyMembers.[0].firstName}} {{familyMembers.[0].middle}} {{familyMembers.[0].lastName}}
+			  	</div>
 
-	  <form>
-	  	<div class="checkbox">
-	  		<label>
-	  			<input type="checkbox" name="foster-child">
-	        Foster Child
-	  		</label>
-	  	</div>
-	    <div class="checkbox">
-	      <label>
-	        <input type="checkbox" name="migrant">
-	        Migrant
-	      </label>
-	    </div>
-	    <div class="checkbox">
-	      <label>
-	        <input type="checkbox" name="runaway">
-	        Runaway
-	      </label>
-	    </div>
-	    <div class="checkbox">
-	      <label>
-	        <input type="checkbox" name="homeless">
-	        Homeless
-	      </label>
-	    </div>
-	    <div class="checkbox">
-	      <label>
-	        <input type="checkbox" name="head-start-participant">
-	        Head Start Participant
-	      </label>
-	    </div>  	
-	  </form>
+				  <h3 class="section-title">Is {{familyMembers.[0].firstName}} considered a:</h3>
+				  <p>Select all that apply</p>
+
+				  <form>
+				  	<div class="checkbox">
+				  		<label>
+				  			<input type="checkbox" name="foster-child">
+				        Foster Child
+				  		</label>
+				  	</div>
+				    <div class="checkbox">
+				      <label>
+				        <input type="checkbox" name="migrant">
+				        Migrant
+				      </label>
+				    </div>
+				    <div class="checkbox">
+				      <label>
+				        <input type="checkbox" name="runaway">
+				        Runaway
+				      </label>
+				    </div>
+				    <div class="checkbox">
+				      <label>
+				        <input type="checkbox" name="homeless">
+				        Homeless
+				      </label>
+				    </div>
+				    <div class="checkbox">
+				      <label>
+				        <input type="checkbox" name="head-start-participant">
+				        Head Start Participant
+				      </label>
+				    </div>  	
+				  </form>
+
+			</div>
+		</div>
 
 	</div>
 
